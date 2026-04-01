@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|c:\\users\\ogreg\\source\\repos\\gyak5_\\teglap_tomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|solutionrelative:teglap_tomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|c:\\users\\ogreg\\source\\repos\\gyak5_\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|c:\\users\\ogreg\\source\\repos\\gyak5_\\teglalap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8865C953-D5E8-4CC3-9344-E805871E4A6C}|gyak5_1.csproj|solutionrelative:teglalap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "teglap_tomb.cs",
+              "DocumentMoniker": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\teglap_tomb.cs",
+              "RelativeDocumentMoniker": "teglap_tomb.cs",
+              "ToolTip": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\teglap_tomb.cs",
+              "RelativeToolTip": "teglap_tomb.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:59:23.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "teglalap.cs",
+              "DocumentMoniker": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\teglalap.cs",
+              "RelativeDocumentMoniker": "teglalap.cs",
+              "ToolTip": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\teglalap.cs",
+              "RelativeToolTip": "teglalap.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T07:06:31.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "program.cs",
+              "DocumentMoniker": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\program.cs",
+              "RelativeDocumentMoniker": "program.cs",
+              "ToolTip": "C:\\Users\\ogreg\\source\\repos\\gyak5_\\program.cs",
+              "RelativeToolTip": "program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwD8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T07:16:34.518Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
