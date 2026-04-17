@@ -48,6 +48,7 @@ class DataBase(DataReader):
             return []
         
     def dressing_beolvas(self, filename):
+
         print("Olvasas indul")
         
         try:
@@ -75,3 +76,34 @@ class DataBase(DataReader):
         except Exception as e:
             print(f"Hiba történt: {e}")
             return []
+        
+    def review_beolvas(self, filename):
+        try:
+            # utf-8-sig: törli a \ufeff karaktert az elejéről
+            # delimiter=';': az oszlopok szétválasztásához
+            eredmeny = []
+            with open(filename, encoding='utf-8-sig') as f:
+                reader = DictReader(f, delimiter=';')
+                
+                for sor in reader:
+                    rev = Review(
+                            sor["ertekeles_id"], 
+                            sor["rendeles_id"], 
+                            sor["varakozasi_ido_perc"], 
+                            sor["elegedettseg_1_10"],
+                            sor["ujrarendeli_e"],  
+                            sor["barista_megjegyzes"], 
+                        )
+                    eredmeny.append(rev)
+
+            return eredmeny
+
+        except FileNotFoundError:
+            print("Hiba: A megadott útvonalon nem található a fájl.")
+            return []
+        except Exception as e:
+            print(f"Hiba történt: {e}")
+            return []
+
+
+

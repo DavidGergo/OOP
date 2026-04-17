@@ -13,9 +13,9 @@ class Review():
     def __str__(self):
         # A számok (pl. 5, 20, 10) határozzák meg az oszlopok szélességét
         # A < jel balra, a > jel jobbra igazít
-        return (f"{self.eretkeles_id:<10} | "
-                f"{self.rendeles_id:<10} | "
-                f"{self.varakozasi_ido_perc:<10} | "
-                f"{self.elegedettseg:<10} | "
-                f"{self.ujrarendeli_e:<10} | "
-                f"{self.barista_megjegyzes:<10}")
+        return (f"{self.eretkeles_id:15} | "
+                f"{self.rendeles_id:<15} | "
+                f"{self.varakozasi_ido_perc:<22} | "
+                f"{self.elegedettseg:<15} | "
+                f"{self.ujrarendeli_e:<15} | "
+                f"{self.barista_megjegyzes:<30}")

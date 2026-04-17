@@ -15,7 +15,7 @@ class Dressing():
         # A számok (pl. 5, 20, 10) határozzák meg az oszlopok szélességét
         # A < jel balra, a > jel jobbra igazít
         return (f"{self.rendeles_id:<8} | "
-                f"{self.tetel_id:<8} | "     
-                f"{self.osszetevo:<15} | "
+                f"{self.tetel_id:<12} | "     
+                f"{self.osszetevo:<16} | "
                 f"{self.kategori:<15} | "
-                f"{self.extra:>5}")
+                f"{self.extra:5}")

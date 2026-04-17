@@ -5,11 +5,17 @@ from pathlib import Path
 
 class App():
         MENU = """
-                1) Rendelések kilistázása
-                2) Feltétek kilistázása
-                3) Vélemények kilistázása
+                1) Kilistázások
+                2) Rekordok kezelése
+                3) Keresések
                 q) quit
                 """
+        Lista_MENU = """
+                1) Rendelések
+                2) Feltétek
+                3) Vélemények
+                v) vissza
+        """
         def __init__(self, filepath):
 
                 if (filepath == "data/order.csv"):
@@ -20,7 +26,7 @@ class App():
                         self.__dressing= dre.dressing_beolvas(filepath)
                 else:
                         rev = DataBase(separator=';')
-                        self.__review= rev.rendeles_beolvas(filepath)
+                        self.__review= rev.review_beolvas(filepath)
                 
         def list_order(order):
 
@@ -30,30 +36,40 @@ class App():
 
         def list_dressing(dressing):
 
-                print(f"\n{'Tétel ID':<2} | {'Rendelés ID':<2} | {'Összetvő':<15} | {'Kategória':>15} | {'Extra-e':<5}\n")
+                print(f"\n{'Tétel ID':<2} | {'Rendelés ID':<12} | {'Összetvő':<16} | {'Kategória':<15} | {'Extra-e':<5}\n")
                 for d in dressing.__dressing:
                         print(d)
 
         def list_review(review):
                 
-                print(f"\n{'ID':<2} | {'Értékelés ID':<15} | {'Rendelési ID':<15} | {'Várakozási idő (perc)':<15} | {'Elegedettség':>15} | {'Újrarendelné-e':<15} | {'Barista Megjegyzése':<15}\n")
+                print(f"\n{'Értékelés ID':<15} | {'Rendelési ID':<15} | {'Várakozási idő (perc)':<22} | {'Elegedettség':<15} | {'Újrarendelné-e':<15} | {'Barista Megjegyzése':<30}\n")
                 for r in review.__review:
                         print(r)               
 
         def run(self):
                 while True:
+                        print("="*20 + "  +++  " + "="*20)
                         print(self.MENU)
                         valasz = input("==> ")
                         match valasz:
                                 case "1":
-                                        
-                                        self.list_order(App("data/order.csv"))
+                                        print(self.Lista_MENU)
+                                        listazas_valasz = input("==> ")
+                                        match listazas_valasz:
+                                                case "1":
+                                                        self.list_order(App("data/order.csv"))
+                                                case "2":
+                                                        self.list_dressing(App("data/dressing.csv"))
+                                                case "3":
+                                                        self.list_review(App("data/review.csv"))
+                                                case "v":
+                                                        continue
                                 case "2":
-                                        
-                                        self.list_dressing(App("data/dressing.csv"))
+                                        #rekord kezelés
+                                        return
                                 case "3":
-                                        
-                                        self.list_review(App("data/review.csv"))
+                                        #Keresés
+                                        return
                                 case "q":
                                         return
         
