@@ -23,3 +23,15 @@ class Order():
                 f"{self.hab_jelzo:<15} | "
                 f"{self.ossz_osszetevo:<16} | "
                 f"{self.ar_ft:<5} Ft")
+
+    def to_dict(self):
+        return {
+            "rendeles_id": self.rendeles_id,
+            "ugyfel_alias": self.ugyfel_alias,
+            "ital_meret": self.ital_meret,
+            "tejtipus": self.tejtipus,
+            "szirupok_szama": self.szirupok_szama,
+            "hab_jelzo": self.hab_jelzo,
+            "ossz_osszetevo": self.ossz_osszetevo,
+            "ar_ft": self.ar_ft
+        }

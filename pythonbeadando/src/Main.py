@@ -1,8 +1,18 @@
 from app import App
 
 
-print("\n Kezdes \n")
-App.run(App)
-print("\n Viszlát! \n")
+
+
+def main():
+
+    print("\n Kezdes \n")
+    alkalmazas = App() 
+    alkalmazas.run()
+    print("\n Viszlát! \n")
+    
+if __name__ == "__main__":
+    main()
+
+
 
     

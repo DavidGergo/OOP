@@ -1,9 +1,11 @@
 from csv import DictReader
+from csv import DictWriter
 from pathlib import Path
 from orders import Order
 from dressing import Dressing
 from review import Review
 from abc import ABC
+
 class DataReader(ABC):
     def read(self, filename: str) -> list[Order]:
         pass
@@ -105,5 +107,18 @@ class DataBase(DataReader):
             print(f"Hiba történt: {e}")
             return []
 
+    def new_record(self, filename, lista):
+        if not lista:
+            print("Nincs feltölthető adat.")
+            return
+        
+        mezo_nevek = list(lista[0].to_dict().keys())
 
+        with open(filename, mode='w', encoding='utf-8-sig', newline='') as f:
+            writer = DictWriter(f, fieldnames=mezo_nevek, delimiter=';')
+            writer.writeheader()
 
+            for elem in lista:
+                writer.writerow(elem.to_dict())
+
+        print("Mentés befejezve.")

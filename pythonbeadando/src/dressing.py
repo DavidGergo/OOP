@@ -19,3 +19,12 @@ class Dressing():
                 f"{self.osszetevo:<16} | "
                 f"{self.kategori:<15} | "
                 f"{self.extra:5}")
+
+    def to_dict(self):
+        return {
+            "rendeles_id": self.rendeles_id,
+            "tetel_id": self.tetel_id,
+            "osszetevo": self.osszetevo,
+            "kategori": self.kategori,
+            "extra_e": self.extra
+        }
