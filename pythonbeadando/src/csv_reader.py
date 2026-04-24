@@ -18,7 +18,7 @@ class DataBase(DataReader):
 
     def rendeles_beolvas(self, filename):
         # Üres lista az adatoknak
-        print("Olvasas indul")
+        #print("Olvasas indul")
         
         try:
             # utf-8-sig: törli a \ufeff karaktert az elejéről
@@ -51,7 +51,7 @@ class DataBase(DataReader):
         
     def dressing_beolvas(self, filename):
 
-        print("Olvasas indul")
+        #print("Olvasas indul")
         
         try:
             # utf-8-sig: törli a \ufeff karaktert az elejéről
@@ -84,17 +84,18 @@ class DataBase(DataReader):
             # utf-8-sig: törli a \ufeff karaktert az elejéről
             # delimiter=';': az oszlopok szétválasztásához
             eredmeny = []
-            with open(filename, encoding='utf-8-sig') as f:
+            with open(filename, mode='r', encoding='utf-8-sig') as f:
                 reader = DictReader(f, delimiter=';')
                 
                 for sor in reader:
                     rev = Review(
+                            sor["rendeles_id"],
                             sor["ertekeles_id"], 
-                            sor["rendeles_id"], 
+                             
                             sor["varakozasi_ido_perc"], 
                             sor["elegedettseg_1_10"],
                             sor["ujrarendeli_e"],  
-                            sor["barista_megjegyzes"], 
+                            sor["barista_megjegyzes"] 
                         )
                     eredmeny.append(rev)
 
